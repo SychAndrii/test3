@@ -1,0 +1,19 @@
+{{#unless email}}
+<h1>Sign In</h1>
+
+<form action="/signIn" method="post">
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+    </div>
+    <input type="submit" value="Sign In">
+    <input type="reset" value="Reset">
+</form>
+{{else}}
+<p>{{email}} signed in successfully.</p>
+{{/unless}}
+<h3><a href="/">Go home</a></h3>
